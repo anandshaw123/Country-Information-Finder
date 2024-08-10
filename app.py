@@ -1,176 +1,10 @@
-# # This Below 👇👇 code have no Submit button and Flag alignment  😊😊😊😊😊😊😊😊😊😊😊😊
-
-# import requests
-# from PIL import Image 
-# import streamlit as st
-# from countryinfo import CountryInfo
-
-# st.title("Country Information Finder")
-# st.balloons()
-
-# custom_input = st.checkbox("Enter a country manually")
-
-# if custom_input:
-#     country_name = st.text_input("Enter the name of the country")
-# else:
-#     country_name = st.selectbox("Select a country", ["Select Countries", "Australia", "Algeria", "Afghanistan", "Angola"])
-
-# if country_name and country_name != "Select Countries":
-#     country_info = CountryInfo(country_name)
-
-#     try:
-#         capital = country_info.capital()
-#         currencies = country_info.currencies()
-#         populations = country_info.population()
-#         calling_codes = country_info.calling_codes()
-#         languages = country_info.languages()
-#         borders = country_info.borders()
-#         alt_spellings = country_info.alt_spellings()
-#         area = country_info.area()
-#         wiki_link = country_info.wiki()
-
-#         def get_country_flag(country_name):
-#             url = f"https://restcountries.com/v3.1/name/{country_name}"
-#             response = requests.get(url)
-#             if response.status_code == 200:
-#                 data = response.json()
-#                 flag_url = data[0]['flags']['svg']
-#                 return flag_url
-#             else:
-#                 return None
-
-#         flag_url = get_country_flag(country_name)
-        
-#         if flag_url:
-#             st.image(flag_url, width=150, caption=f"Flag of {country_name}")
-#         else:
-#             st.error("Flag not found.")
-
-#         formatted_codes = [f"+{code}" for code in calling_codes]
-
-#         col1, col2 = st.columns(2)
-
-#         with col1:
-#             st.markdown(f"<h3 style='color: #FF6347;'>Information for {country_name}</h3>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>Capital: <span style='color: #32CD32;'>{capital}</span></h5>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>Currencies: <span style='color: #32CD32;'>{', '.join(currencies)}</span></h5>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>Calling Codes: <span style='color: #32CD32;'>{', '.join(formatted_codes)}</span></h5>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>Population: <span style='color: #32CD32;'>{populations}</span></h5>", unsafe_allow_html=True)
-
-#         with col2:
-#             st.markdown("<h3 style='color: #FF6347;'>Additional Information</h3>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>Languages: <span style='color: #32CD32;'>{', '.join(languages)}</span></h5>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>Borders: <span style='color: #32CD32;'>{borders if borders else 'No land borders'}</span></h5>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>Alternative Spellings: <span style='color: #32CD32;'>{', '.join(alt_spellings)}</span></h5>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>Area: <span style='color: #32CD32;'>{area} sq km</span></h5>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>More Information: <a href='{wiki_link}' style='color: #32CD32;'>Wikipedia</a></h5>", unsafe_allow_html=True)
-
-#     except KeyError:
-#         st.error("Country not found. Please check the spelling and try again.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-# This Code Have All The Things
-
-
-# import requests
-# import streamlit as st
-# from countryinfo import CountryInfo
-
-# st.title("Country Information Finder")
-# st.balloons()
-
-# custom_input = st.checkbox("Enter a country manually")
-
-# if custom_input:
-#     with st.form(key="country_form"):
-#         country_name = st.text_input("Enter the name of the country")
-#         submit_button = st.form_submit_button(label="Submit")
-# else:
-#     country_name = st.selectbox("Select a Countries", ["Select Countries", "Australia", "Algeria", "Afghanistan", "Angola"])
-#     submit_button = True  # Automatically submit if the a country is already selected from the dropdown:
-
-# if submit_button and country_name and country_name != "Select Countries":
-#     country_info = CountryInfo(country_name)
-
-#     try:
-#         capital = country_info.capital()
-#         currencies = country_info.currencies()
-#         populations = country_info.population()
-#         calling_codes = country_info.calling_codes()
-#         languages = country_info.languages()
-#         borders = country_info.borders()
-#         alt_spellings = country_info.alt_spellings()
-#         area = country_info.area()
-#         wiki_link = country_info.wiki()
-
-#         def get_country_flag(country_name):
-#             url = f"https://restcountries.com/v3.1/name/{country_name}"
-#             response = requests.get(url)
-#             if response.status_code == 200:
-#                 data = response.json()
-#                 flag_url = data[0]['flags']['svg']
-#                 return flag_url
-#             else:
-#                 return None
-
-#         flag_url = get_country_flag(country_name)
-
-#         if flag_url:
-#             # st.markdown(f"<div style='text-align:center'><img src='{flag_url}' width='150'></div>", unsafe_allow_html=True)
-#             st.markdown(f"""<div style='text-align:center'><img src='{flag_url}' width='160'>
-#                         <p style='margin-top:10px; font-weight:bold; color:#FF6347;'>{country_name}</p></div>""",unsafe_allow_html=True)
-#         else:
-#             st.error("Flag not found.")
-
-#         formatted_codes = [f"+{code}" for code in calling_codes]
-
-#         col1, col2 = st.columns(2)
-
-#         with col1:
-#             st.markdown(f"<h3 style='color: #FF6347;'>Information for {country_name}</h3>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>Capital: <span style='color: #32CD32;'>{capital}</span></h5>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>Currencies: <span style='color: #32CD32;'>{', '.join(currencies)}</span></h5>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>Calling Codes: <span style='color: #32CD32;'>{', '.join(formatted_codes)}</span></h5>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>Population: <span style='color: #32CD32;'>{populations}</span></h5>", unsafe_allow_html=True)
-
-#         with col2:
-#             st.markdown("<h3 style='color: #FF6347;'>Additional Information</h3>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>Languages: <span style='color: #32CD32;'>{', '.join(languages)}</span></h5>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>Borders: <span style='color: #32CD32;'>{borders if borders else 'No land borders'}</span></h5>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>Alternative Spellings: <span style='color: #32CD32;'>{', '.join(alt_spellings)}</span></h5>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>Area: <span style='color: #32CD32;'>{area} sq km</span></h5>", unsafe_allow_html=True)
-#             st.markdown(f"<h5 style='color: #4682B4;'>More Information: <a href='{wiki_link}' style='color: #32CD32;'>Wikipedia</a></h5>", unsafe_allow_html=True)
-
-#     except KeyError:
-#         st.error("Country not found. Please check the spelling and try again.")
-
-
-
-
-
-
-# https://getwallpapers.com/collection/32k-ultra-hd-wallpapers for wallpaper
-
-
 import requests
 import streamlit as st
 from countryinfo import CountryInfo
 
-# Set page configuration to wide mode:
+
 st.set_page_config(layout="wide")
 
-# Custom CSS for background image, text colors, and shadows..
 background_css = """
 <style>
     .stApp {
@@ -238,10 +72,9 @@ background_css = """
 </style>
 """
 
-# Apply the custom CSS
+
 st.markdown(background_css, unsafe_allow_html=True)
 st.balloons()
-# st.markdown("""<div style='text-align: center; width: 150%; height: 150px;'><h1 style='color: orange;'>Country Information Finder</h1></div>""",unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; color: orange; font-size: 70px;'>ᴄᴏᴜɴᴛʀʏ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ꜰɪɴᴅᴇʀ</h1>", unsafe_allow_html=True)
 
 
@@ -283,9 +116,11 @@ with st.container():
         with st.form(key="country_form"):
             country_name = st.text_input("𝐄𝐧𝐭𝐞𝐫 𝐭𝐡𝐞 𝐍𝐚𝐦𝐞 𝐨𝐟 𝐭𝐡𝐞 𝐂𝐨𝐮𝐧𝐭𝐫𝐲")
             submit_button = st.form_submit_button(label="𝐒𝐮𝐛𝐦𝐢𝐭")
+            URL = 'https://history.state.gov/countries/all'
+            st.markdown(f"<h6 class='more-info'>Countries List: <a href='{URL}'>Click Here..</a></h5>", unsafe_allow_html=True)
     else:
         country_name = st.selectbox("𝐒𝐞𝐥𝐞𝐜𝐭 𝐚 𝐂𝐨𝐮𝐧𝐭𝐫𝐲", ["Select Countries"] + countries)
-        submit_button = True  # Automatically submit if a country is selected from the dropdown
+        submit_button = True
 
     if submit_button and country_name and country_name != "Select Countries":
         country_info = CountryInfo(country_name)
@@ -326,8 +161,8 @@ with st.container():
                         </div>
                         """,
                         unsafe_allow_html=True,
-                    )## Adding the All Countries List Links..
-                    st.markdown(f"<h6 class='more-info'>Countries List: <a href='{URL}'>Click Here..</a></h5>", unsafe_allow_html=True)
+                    )
+                    
                 else:
                     st.error("Flag not found.")
 

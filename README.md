@@ -96,7 +96,7 @@ Providing downloadable reports for selected countries. -->
 
 
 
-<h2 align="center">Deployment 🌐</h2> 
+<h1 align="center">Deployment 🌐</h1> 
 
 **This application is deployed on Server making it accessible to anyone. You can access the live application [Click Here](https://country-information-finder.streamlit.app/)**
 

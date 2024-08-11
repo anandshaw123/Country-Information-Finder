@@ -98,7 +98,7 @@ Providing downloadable reports for selected countries. -->
 
 <h2 align="center">Deployment 🌐</h2> 
 
-This application is deployed on Server making it accessible to anyone. You can access the live application [Click Here](https://country-information-finder.streamlit.app/)
+**This application is deployed on Server making it accessible to anyone. You can access the live application [Click Here](https://country-information-finder.streamlit.app/)**
 
 <!--This application is deployed on Streamlit Community Cloud, making it accessible to anyone with an internet connection. You can access the live application here.-->
 

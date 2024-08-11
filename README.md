@@ -1,4 +1,6 @@
-<h1 align="center">ᴄᴏᴜɴᴛʀʏ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ꜰɪɴᴅᴇʀ</h1>
+![Screenshot 2024-08-12 002848](https://github.com/user-attachments/assets/a072ed3d-181a-49e0-bea4-5b00769c46df)<h1 align="center">ᴄᴏᴜɴᴛʀʏ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ꜰɪɴᴅᴇʀ</h1>
+
+<!--![Country Information Finder](![Screenshot 2024-08-12 002848](https://github.com/user-attachments/assets/fad01ec9-3997-4664-bf3d-fa31360e700d))-->
 
 
 **Country Information Finder** is a web application built using the Streamlit. This small project provides detailed information about any Countries in the world, also custom input option user can enter the name of their desired country and showing the information, making it a handy tool for quick reference or educational purposes and user can enter the name of their desired country.

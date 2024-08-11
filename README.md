@@ -50,31 +50,6 @@ Providing downloadable reports for selected countries. -->
 
 
 
-
-
-
-
-
-
-
-## **How It Works** 🛠️
-- Streamlit Interface: The user-friendly interface built with Streamlit allows for seamless interaction.
-- Dynamic Search: Users can either select from a dropdown or type in a custom country name.
-- Information: Upon selection or input, the app fetches and displays the requested information..
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
 ## **Technologies Used** 👨🏻‍💻
 
 - Streamlit

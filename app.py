@@ -116,7 +116,7 @@ with st.container():
         with st.form(key="country_form"):
             country_name = st.text_input("𝐄𝐧𝐭𝐞𝐫 𝐭𝐡𝐞 𝐍𝐚𝐦𝐞 𝐨𝐟 𝐭𝐡𝐞 𝐂𝐨𝐮𝐧𝐭𝐫𝐲")
             submit_button = st.form_submit_button(label="𝐒𝐮𝐛𝐦𝐢𝐭")
-            URL = 'https://history.state.gov/countries/all'
+            ##URL = 'https://history.state.gov/countries/all'
             st.markdown(f"<h6 class='more-info'>Countries List: <a href='{URL}'>Click Here..</a></h5>", unsafe_allow_html=True)
     else:
         country_name = st.selectbox("𝐒𝐞𝐥𝐞𝐜𝐭 𝐚 𝐂𝐨𝐮𝐧𝐭𝐫𝐲", ["Select Countries"] + countries)
